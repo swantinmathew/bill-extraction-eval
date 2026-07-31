@@ -2,9 +2,97 @@
   "bill_001": {
     "vendor": "The Old Vicarage Restaurant",
     "invoice_number": null,
-    "date": "null",
-    "amount": 128.50,
+    "date": null,
+    "amount": 228.50,
+    "currency": "GBP",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+"bill_002": {
+  "vendor": "Nath Traders",
+  "invoice_number": "345",
+  "date": "2024-12-01",
+  "amount": 3186.00,
+  "currency": "INR",
+  "tax_details": {"gst_number": "07AAGPN2913H1ZU", "gst_amount": 486.00}
+},
+    "bill_003": {
+    "vendor": "Moti Mahal Restaurant",
+    "invoice_number": "19876",
+    "date": "2018-12-10",
+    "amount": 1800.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": "07AAHFM6096Q2ZE", "gst_amount": 90.00}
+    },
+  "bill_004": {
+    "vendor": "Vanakkam India Indian Restaurant",
+    "invoice_number": "01298",
+    "date": null,
+    "amount": 16.00,
+    "currency": null,
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+  "bill_005": {
+  "vendor": "Shri Hanuman Traders",
+  "invoice_number": "174",
+  "date": "2021-03-28",
+  "amount": 4280.20,
+  "currency": "INR",
+  "tax_details": {"gst_number": null, "gst_amount": 732.00}
+  },
+  "bill_006": {
+    "vendor": "Srinivasa Book Store",
+    "invoice_number": "4188",
+    "date": "2022-08-14",
+    "amount": 19000.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+  "bill_007": {
+    "vendor": "Vishal Punjabi Vaishno Bhojanalya",
+    "invoice_number": "1687",
+    "date": null,
+    "amount": 146.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+  "bill_008": {
+    "vendor": "Maatha Agencies",
+    "invoice_number": "376",
+    "date": "2020-09-28",
+    "amount": 9222.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+  "bill_009": {
+    "vendor": "Bharat Associates",
+    "invoice_number": "004",
+    "date": "2020-11-15",
+    "amount": 6935.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": "09GBVPS8212J1ZP", "gst_amount": 1250.00}
+  },
+  "bill_010": {
+    "vendor": "Mukesh Nilu Vishwakarma",
+    "invoice_number": null,
+    "date": null,
+    "amount": 10250.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+  "bill_011": {
+    "vendor": null,
+    "invoice_number": null,
+    "date": "2018-03-14",
+    "amount": 30400.00,
+    "currency": "INR",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  },
+  "bill_012": {
+    "vendor": "Nancarrow & Temple Limited",
+    "invoice_number": "3852",
+    "date": "1970-03-24",
+    "amount": 53.55,
     "currency": "GBP",
     "tax_details": {"gst_number": null, "gst_amount": null}
   }
-}
+}  
