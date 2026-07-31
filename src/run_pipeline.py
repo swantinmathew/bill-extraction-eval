@@ -17,10 +17,8 @@ def get_extractors():
     extractors = []
     if os.getenv("GEMINI_API_KEY"):
         extractors.append(GeminiExtractor())
-    # if os.getenv("GEMINI_API_KEY"):
-    #     extractors.append(GeminiExtractor())
-    # if os.getenv("OPENAI_API_KEY"):
-    #     extractors.append(OpenAIExtractor())
+    if os.getenv("OPENROUTER_API_KEY"):
+         extractors.append(OpenAIExtractor())
     return extractors
 
 

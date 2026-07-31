@@ -8,14 +8,14 @@ class OpenAIExtractor(BaseExtractor):
     name = "openai"
 
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"),base_url="https://openrouter.ai/api/v1")
 
     def extract(self, image_path: str, bill_id: str) -> ExtractionResult:
         with open(image_path, "rb") as f:
             img_b64 = base64.b64encode(f.read()).decode()
 
         response = self.client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="openai/gpt-4o-mini",
             messages=[{
                 "role": "user",
                 "content": [

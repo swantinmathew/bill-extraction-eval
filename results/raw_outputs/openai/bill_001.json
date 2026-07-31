@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_001",
+  "model_name": "openai",
+  "vendor": "THE OLD VICARAGE",
+  "invoice_number": "T9",
+  "date": null,
+  "amount": 128.5,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"THE OLD VICARAGE\",\n  \"invoice_number\": \"T9\",\n  \"date\": null,\n  \"amount\": 128.50,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+}
