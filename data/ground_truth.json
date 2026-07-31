@@ -1,0 +1,10 @@
+{
+  "bill_001": {
+    "vendor": "The Old Vicarage Restaurant",
+    "invoice_number": null,
+    "date": "XXXX-XX-XX",
+    "amount": 128.50,
+    "currency": "GBP",
+    "tax_details": {"gst_number": null, "gst_amount": null}
+  }
+}

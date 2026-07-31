@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_001",
+  "model_name": "gemini",
+  "vendor": "THE OLD VICARAGE RESTAURANT",
+  "invoice_number": null,
+  "date": null,
+  "amount": 128.5,
+  "currency": "GBP",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"THE OLD VICARAGE RESTAURANT\",\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 128.50,\n  \"currency\": \"GBP\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+}
