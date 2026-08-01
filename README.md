@@ -25,6 +25,8 @@ bill-extraction-eval/
 │   ├── zoho/
 │   │   └── zoho_client.py        # OAuth2 + expense creation
 │   └── run_pipeline.py           # runs every bill through every model
+├── ui/
+│   └── app.py                    # bonus Streamlit UI, side-by-side comparison
 ├── push_to_zoho.py               # pushes extracted data into Zoho Books
 ├── results/
 │   ├── raw_outputs/{model}/      # per-bill JSON output per model
@@ -55,6 +57,7 @@ python -m src.run_pipeline      # extract data from all bills, all models
 python -m src.eval.scorer       # score accuracy per model per field
 python -m src.eval.cost_tracker # estimate cost per model
 python push_to_zoho.py          # push extracted data to Zoho Books
+streamlit run ui/app.py         # optional: view side-by-side comparison UI
 ```
 
 ## Dataset
