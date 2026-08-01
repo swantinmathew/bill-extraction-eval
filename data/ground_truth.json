@@ -10,7 +10,7 @@
 "bill_002": {
   "vendor": "Nath Traders",
   "invoice_number": "345",
-  "date": "2024-12-01",
+  "date": "2024-12-04",
   "amount": 3186.00,
   "currency": "INR",
   "tax_details": {"gst_number": "07AAGPN2913H1ZU", "gst_amount": 486.00}
@@ -80,7 +80,7 @@
     "tax_details": {"gst_number": null, "gst_amount": null}
   },
   "bill_011": {
-    "vendor": null,
+    "vendor": "MSTC PRODUCTS",
     "invoice_number": null,
     "date": "2018-03-14",
     "amount": 30400.00,

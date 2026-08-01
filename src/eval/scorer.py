@@ -11,7 +11,7 @@ def score_field(field, truth_val, pred_val):
     if pred_val is None or truth_val is None:
         return 0.0
     if field == "vendor":
-        return fuzz.token_sort_ratio(str(truth_val), str(pred_val).lower()) / 100
+        return fuzz.partial_ratio(str(truth_val).lower(), str(pred_val).lower()) / 100
     if field == "amount":
         try:
             return 1.0 if abs(float(truth_val) - float(pred_val)) < 0.01 else 0.0
