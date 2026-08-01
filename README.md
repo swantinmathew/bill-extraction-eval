@@ -63,7 +63,7 @@ streamlit run ui/app.py         # bonus: dataset comparison + live upload UI
 ```
 
 ## Bonus UI
-Live demo: https://your-app-name.streamlit.app
+Live demo: https://bill-extraction-audit.streamlit.app
 (If unavailable — free-tier hosting can sleep after inactivity, or API quota may be
 exhausted — screenshots below, or run locally: `streamlit run ui/app.py`)
 
