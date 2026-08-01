@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_009",
+  "model_name": "openai",
+  "vendor": "Bharat Associates",
+  "invoice_number": "004",
+  "date": "2023-10-15",
+  "amount": 323453.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": "09GBVPS82121JZP",
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"Bharat Associates\",\n  \"invoice_number\": \"004\",\n  \"date\": \"2023-10-15\",\n  \"amount\": 323453,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"09GBVPS82121JZP\",\n    \"gst_amount\": null\n  }\n}"
+}

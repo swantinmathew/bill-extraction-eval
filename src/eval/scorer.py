@@ -46,5 +46,14 @@ def main():
         for f, s in scores.items():
             print(f"  {f}: {s:.2f}")
 
+    lines = ["# Accuracy per model per field\n"]
+    lines.append("| Model | " + " | ".join(fields) + " |")
+    lines.append("|---" * (len(fields)+1) + "|")
+    for model, scores in results.items():
+        row = f"| {model} | " + " | ".join(f"{scores[f]:.2f}" for f in fields) + " |"
+        lines.append(row)
+
+    Path("results/report.md").write_text("\n".join(lines))
+    print("\nSaved to results/report.md")
 if __name__ == "__main__":
     main()

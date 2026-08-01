@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_006",
+  "model_name": "gemini",
+  "vendor": "SRINIVASA BOOK STORE",
+  "invoice_number": "4188",
+  "date": "2022-08-14",
+  "amount": 19000.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"SRINIVASA BOOK STORE\",\n  \"invoice_number\": \"4188\",\n  \"date\": \"2022-08-14\",\n  \"amount\": 19000.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+}

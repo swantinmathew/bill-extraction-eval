@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_004",
+  "model_name": "openai",
+  "vendor": "Vanakkam Thiru",
+  "invoice_number": "01298",
+  "date": null,
+  "amount": 16.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"Vanakkam Thiru\",\n  \"invoice_number\": \"01298\",\n  \"date\": null,\n  \"amount\": 16.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}\n}"
+}

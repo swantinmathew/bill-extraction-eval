@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_010",
+  "model_name": "gemini",
+  "vendor": null,
+  "invoice_number": null,
+  "date": null,
+  "amount": 10250.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": null,\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 10250.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+}

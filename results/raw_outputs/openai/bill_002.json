@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_002",
+  "model_name": "openai",
+  "vendor": "NATH TRADERS",
+  "invoice_number": "A12-2024",
+  "date": "2024-01-12",
+  "amount": 2700.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": "07AAGPN2913H1ZU",
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"NATH TRADERS\",\n  \"invoice_number\": \"A12-2024\",\n  \"date\": \"2024-01-12\",\n  \"amount\": 2700,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"07AAGPN2913H1ZU\",\n    \"gst_amount\": null\n  }\n}"
+}

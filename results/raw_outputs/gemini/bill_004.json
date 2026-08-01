@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_004",
+  "model_name": "gemini",
+  "vendor": "Vanakkam India Indian Restaurant",
+  "invoice_number": "01298",
+  "date": null,
+  "amount": 16.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\"vendor\": \"Vanakkam India Indian Restaurant\", \"invoice_number\": \"01298\", \"date\": null, \"amount\": 16.0, \"currency\": \"INR\", \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}}"
+}

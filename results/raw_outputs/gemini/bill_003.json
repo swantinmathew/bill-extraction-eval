@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_003",
+  "model_name": "gemini",
+  "vendor": "Moti Mahal Restaurant",
+  "invoice_number": "19876",
+  "date": "2018-12-10",
+  "amount": 1800.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": "07AAHFM6095Q2ZE",
+    "gst_amount": 85.5
+  },
+  "raw_response": "{\n  \"vendor\": \"Moti Mahal Restaurant\",\n  \"invoice_number\": \"19876\",\n  \"date\": \"2018-12-10\",\n  \"amount\": 1800,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"07AAHFM6095Q2ZE\",\n    \"gst_amount\": 85.5\n  }\n}"
+}

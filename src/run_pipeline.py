@@ -50,6 +50,10 @@ def main():
             out_dir.mkdir(parents=True, exist_ok=True)
             out_path = out_dir / f"{bill_id}.json"
 
+            if out_path.exists():
+                print(f"[skip] {extractor.name} -> {bill_id} already done")
+                continue
+
             print(f"[run] {extractor.name} -> {bill_id}")
             try:
                 result = extractor.extract(str(image_path), bill_id)

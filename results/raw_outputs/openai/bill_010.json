@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_010",
+  "model_name": "openai",
+  "vendor": "HDFC BANK",
+  "invoice_number": null,
+  "date": null,
+  "amount": 20250.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"HDFC BANK\",\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 20250,\n  \"currency\": \"INR\",\n  \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}\n}"
+}

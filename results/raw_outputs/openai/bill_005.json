@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_005",
+  "model_name": "openai",
+  "vendor": "SHRI HANUMAN TRADERS",
+  "invoice_number": "174",
+  "date": null,
+  "amount": 4090.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"SHRI HANUMAN TRADERS\",\n  \"invoice_number\": \"174\",\n  \"date\": null,\n  \"amount\": 4090,\n  \"currency\": \"INR\",\n  \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}\n}"
+}

@@ -1,0 +1,14 @@
+{
+  "bill_id": "bill_007",
+  "model_name": "openai",
+  "vendor": "VISHAL PUNJABI VAISHNO BHOJANALYA",
+  "invoice_number": "1687",
+  "date": "1999-05-22",
+  "amount": 146.0,
+  "currency": "INR",
+  "tax_details": {
+    "gst_number": null,
+    "gst_amount": null
+  },
+  "raw_response": "{\n  \"vendor\": \"VISHAL PUNJABI VAISHNO BHOJANALYA\",\n  \"invoice_number\": \"1687\",\n  \"date\": \"1999-05-22\",\n  \"amount\": 146,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+}

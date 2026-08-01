@@ -50,7 +50,7 @@
   "bill_007": {
     "vendor": "Vishal Punjabi Vaishno Bhojanalya",
     "invoice_number": "1687",
-    "date": null,
+    "date": "2007-05-22",
     "amount": 146.00,
     "currency": "INR",
     "tax_details": {"gst_number": null, "gst_amount": null}
@@ -66,8 +66,8 @@
   "bill_009": {
     "vendor": "Bharat Associates",
     "invoice_number": "004",
-    "date": "2020-11-15",
-    "amount": 6935.00,
+    "date": "2024-11-15",
+    "amount": 32345.00,
     "currency": "INR",
     "tax_details": {"gst_number": "09GBVPS8212J1ZP", "gst_amount": 1250.00}
   },
@@ -92,7 +92,7 @@
     "invoice_number": "3852",
     "date": "1970-03-24",
     "amount": 53.55,
-    "currency": "GBP",
+    "currency": null,
     "tax_details": {"gst_number": null, "gst_amount": null}
   }
 }  
