@@ -26,7 +26,9 @@ bill-extraction-eval/
 │   │   └── zoho_client.py        # OAuth2 + expense creation
 │   └── run_pipeline.py           # runs every bill through every model
 ├── ui/
-│   └── app.py                    # bonus Streamlit UI, side-by-side comparison
+│   ├── app.py                    # bonus Streamlit UI: dataset comparison + live upload
+│   └── .streamlit/
+│       └── config.toml           # UI theme
 ├── push_to_zoho.py               # pushes extracted data into Zoho Books
 ├── results/
 │   ├── raw_outputs/{model}/      # per-bill JSON output per model
@@ -57,8 +59,31 @@ python -m src.run_pipeline      # extract data from all bills, all models
 python -m src.eval.scorer       # score accuracy per model per field
 python -m src.eval.cost_tracker # estimate cost per model
 python push_to_zoho.py          # push extracted data to Zoho Books
-streamlit run ui/app.py         # optional: view side-by-side comparison UI
+streamlit run ui/app.py         # bonus: dataset comparison + live upload UI
 ```
+
+## Bonus UI
+Live demo: https://your-app-name.streamlit.app
+(If unavailable — free-tier hosting can sleep after inactivity, or API quota may be
+exhausted — screenshots below, or run locally: `streamlit run ui/app.py`)
+
+**Evaluation dataset tab:**
+![Dataset comparison view](docs/ui-dataset-view.png)
+
+**Upload a bill tab — before extraction:**
+![Upload view before extraction](docs/ui-upload-before.png)
+
+**Upload a bill tab — after extraction:**
+![Upload view after extraction, part 1](docs/ui-upload-after-view-1.png)
+![Upload view after extraction, part 2](docs/ui-upload-after-view-2.png)
+
+Two tabs:
+- **Evaluation dataset** — pick any of the 12 bills, see the original image, ground
+  truth, and each model's extraction side by side with ✓/✗ per-field markers and an
+  overall accuracy score.
+- **Upload a bill** — upload a new bill image and see live extraction from each
+  configured model, side by side. Extraction only runs on button click (not on every
+  page interaction) to avoid burning API quota unnecessarily.
 
 ## Dataset
 12 handwritten bills, chosen for variety: restaurant bills (India, UK, Cambodia),
@@ -71,15 +96,24 @@ handwriting and inconsistent printed totals.
   exactly or not at all.
 - **Numeric tolerance** — amount: compared as normalized numbers, currency symbols
   and commas stripped, rather than string match.
-- **Fuzzy match** (rapidfuzz `token_sort_ratio`, case-insensitive) — vendor name:
-  handwriting OCR rarely reproduces a name character-for-character, so exact match
-  would unfairly penalize near-correct reads.
+- **Fuzzy match** (rapidfuzz `partial_ratio`, case-insensitive) — vendor name:
+  initially used `token_sort_ratio`, but switched to `partial_ratio` after noticing
+  models often returned the correct core business name while dropping a generic
+  suffix (e.g. "Moti Mahal" vs ground truth "Moti Mahal Restaurant").
+  `token_sort_ratio` penalized these as near-misses even though the vendor was
+  correctly identified; `partial_ratio` checks whether the shorter string is
+  well-contained in the longer one, scoring these cases as strong matches instead —
+  a better reflection of genuine vendor-identification accuracy.
 
 Where a bill had genuine ambiguity (e.g. printed total not matching the line-item sum,
 or separate "Total" vs "To Pay after deposit" figures), ground truth consistently uses
 the bill's final stated payable total.
 
 ## Results
+
+*(Run `python -m src.eval.scorer` and `python -m src.eval.cost_tracker` after the
+`partial_ratio` scoring change, then paste the updated tables from `results/report.md`
+here — the numbers below are from before that fix and are now stale.)*
 
 ### Accuracy per model per field
 | Model | vendor | invoice_number | date | amount | currency |
@@ -95,8 +129,8 @@ the bill's final stated payable total.
 
 ## Recommendation
 Gemini outperforms OpenAI (gpt-4o-mini) across every field in this test, with the
-largest gaps in date extraction (+0.42) and amount extraction (+0.41), while also
-being roughly half the estimated cost. Recommend Gemini for this use case.
+largest gaps in date extraction and amount extraction, while also being roughly half
+the estimated cost. Recommend Gemini for this use case.
 
 ## Known limitations
 - Small sample size (12 bills) — findings are directional, not statistically robust.
