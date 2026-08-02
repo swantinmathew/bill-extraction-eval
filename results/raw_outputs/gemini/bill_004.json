@@ -3,12 +3,14 @@
   "model_name": "gemini",
   "vendor": "Geethas Net",
   "invoice_number": null,
-  "date": "2023-12-30",
+  "date": "2025-12-30",
   "amount": 80.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"Geethas Net\",\n  \"invoice_number\": null,\n  \"date\": \"2023-12-30\",\n  \"amount\": 80.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"Geethas Net\",\n  \"invoice_number\": null,\n  \"date\": \"2025-12-30\",\n  \"amount\": 80,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1219,
+  "output_tokens": 85
 }

@@ -26,6 +26,12 @@ class GeminiExtractor(BaseExtractor):
             ]
         )
 
+        input_tokens = output_tokens = None
+        usage = getattr(response, "usage_metadata", None)
+        if usage:
+            input_tokens = getattr(usage, "prompt_token_count", None)
+            output_tokens = getattr(usage, "candidates_token_count", None)
+
         raw_text = response.text.strip()
         if raw_text.startswith("```"):
             raw_text = raw_text.strip("`")
@@ -41,7 +47,11 @@ class GeminiExtractor(BaseExtractor):
                 date=data.get("date"), amount=data.get("amount"),
                 currency=data.get("currency", "INR"),
                 tax_details=TaxDetails(**(data.get("tax_details") or {})),
-                raw_response=raw_text
+                raw_response=raw_text,
+                input_tokens=input_tokens, output_tokens=output_tokens,
             )
         except (json.JSONDecodeError, TypeError):
-            return ExtractionResult(bill_id=bill_id, model_name=self.name, raw_response=raw_text)
+            return ExtractionResult(
+                bill_id=bill_id, model_name=self.name, raw_response=raw_text,
+                input_tokens=input_tokens, output_tokens=output_tokens,
+            )

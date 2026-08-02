@@ -10,5 +10,7 @@
     "gst_number": "07AAGPN2913H1ZU",
     "gst_amount": 486.0
   },
-  "raw_response": "{\n  \"vendor\": \"NATH TRADERS\",\n  \"invoice_number\": \"345\",\n  \"date\": \"2024-12-04\",\n  \"amount\": 3186,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"07AAGPN2913H1ZU\",\n    \"gst_amount\": 486\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"NATH TRADERS\",\n  \"invoice_number\": \"345\",\n  \"date\": \"2024-12-04\",\n  \"amount\": 3186,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"07AAGPN2913H1ZU\",\n    \"gst_amount\": 486\n  }\n}",
+  "input_tokens": 1212,
+  "output_tokens": 111
 }

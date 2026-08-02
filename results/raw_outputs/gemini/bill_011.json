@@ -2,13 +2,15 @@
   "bill_id": "bill_011",
   "model_name": "gemini",
   "vendor": "MSTC Products",
-  "invoice_number": "2519245",
+  "invoice_number": "2579245",
   "date": "2018-03-14",
-  "amount": 31400.0,
+  "amount": 30400.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"MSTC Products\",\n  \"invoice_number\": \"2519245\",\n  \"date\": \"2018-03-14\",\n  \"amount\": 31400,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"MSTC Products\",\n  \"invoice_number\": \"2579245\",\n  \"date\": \"2018-03-14\",\n  \"amount\": 30400,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1203,
+  "output_tokens": 94
 }

@@ -1,14 +1,16 @@
 {
   "bill_id": "bill_006",
   "model_name": "openai",
-  "vendor": "SRI VASU BOOK STORE",
-  "invoice_number": "4188",
-  "date": "2022-03-11",
+  "vendor": "SAS Book Store",
+  "invoice_number": "1188",
+  "date": "2022-03-14",
   "amount": 19600.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"SRI VASU BOOK STORE\",\n  \"invoice_number\": \"4188\",\n  \"date\": \"2022-03-11\",\n  \"amount\": 19600,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"SAS Book Store\",\n  \"invoice_number\": \"1188\",\n  \"date\": \"2022-03-14\",\n  \"amount\": 19600.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 8627,
+  "output_tokens": 73
 }

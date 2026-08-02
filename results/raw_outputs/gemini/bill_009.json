@@ -10,5 +10,7 @@
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"Seeds 'N' Plants\",\n  \"invoice_number\": \"8704\",\n  \"date\": \"2025-12-24\",\n  \"amount\": 110,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"Seeds 'N' Plants\",\n  \"invoice_number\": \"8704\",\n  \"date\": \"2025-12-24\",\n  \"amount\": 110,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1224,
+  "output_tokens": 91
 }

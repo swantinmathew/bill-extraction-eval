@@ -14,4 +14,6 @@ class ExtractionResult(BaseModel):
     amount: Optional[float] = None
     currency: str = "INR"
     tax_details: TaxDetails = TaxDetails()
-    raw_response: Optional[str] = None   # for debugging malformed output
+    raw_response: Optional[str] = None
+    input_tokens: Optional[int] = None
+    output_tokens: Optional[int] = None

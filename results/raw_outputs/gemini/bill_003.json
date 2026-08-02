@@ -8,7 +8,9 @@
   "currency": "INR",
   "tax_details": {
     "gst_number": "07AAHFM6095Q2ZE",
-    "gst_amount": 85.5
+    "gst_amount": 90.0
   },
-  "raw_response": "{\n  \"vendor\": \"Moti Mahal Restaurant\",\n  \"invoice_number\": \"19876\",\n  \"date\": \"2018-12-10\",\n  \"amount\": 1800,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"07AAHFM6095Q2ZE\",\n    \"gst_amount\": 85.5\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"Moti Mahal Restaurant\",\n  \"invoice_number\": \"19876\",\n  \"date\": \"2018-12-10\",\n  \"amount\": 1800.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"07AAHFM6095Q2ZE\",\n    \"gst_amount\": 90.0\n  }\n}",
+  "input_tokens": 1231,
+  "output_tokens": 109
 }

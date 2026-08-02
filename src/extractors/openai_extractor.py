@@ -8,7 +8,10 @@ class OpenAIExtractor(BaseExtractor):
     name = "openai"
 
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"),base_url="https://openrouter.ai/api/v1")
+        self.client = OpenAI(
+            api_key=os.getenv("OPENROUTER_API_KEY"),
+            base_url="https://openrouter.ai/api/v1"
+        )
 
     def extract(self, image_path: str, bill_id: str) -> ExtractionResult:
         with open(image_path, "rb") as f:
@@ -25,6 +28,11 @@ class OpenAIExtractor(BaseExtractor):
             }]
         )
 
+        input_tokens = output_tokens = None
+        if response.usage:
+            input_tokens = response.usage.prompt_tokens
+            output_tokens = response.usage.completion_tokens
+
         raw_text = response.choices[0].message.content.strip()
         if raw_text.startswith("```"):
             raw_text = raw_text.strip("`")
@@ -40,7 +48,11 @@ class OpenAIExtractor(BaseExtractor):
                 date=data.get("date"), amount=data.get("amount"),
                 currency=data.get("currency", "INR"),
                 tax_details=TaxDetails(**(data.get("tax_details") or {})),
-                raw_response=raw_text
+                raw_response=raw_text,
+                input_tokens=input_tokens, output_tokens=output_tokens,
             )
         except (json.JSONDecodeError, TypeError):
-            return ExtractionResult(bill_id=bill_id, model_name=self.name, raw_response=raw_text)
+            return ExtractionResult(
+                bill_id=bill_id, model_name=self.name, raw_response=raw_text,
+                input_tokens=input_tokens, output_tokens=output_tokens,
+            )

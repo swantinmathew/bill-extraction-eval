@@ -4,11 +4,13 @@
   "vendor": "HDFC BANK",
   "invoice_number": null,
   "date": null,
-  "amount": 20250.0,
+  "amount": 10250.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"HDFC BANK\",\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 20250,\n  \"currency\": \"INR\",\n  \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}\n}"
+  "raw_response": "{\n  \"vendor\": \"HDFC BANK\",\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 10250,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 8627,
+  "output_tokens": 63
 }

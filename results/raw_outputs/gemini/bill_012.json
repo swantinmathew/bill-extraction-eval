@@ -10,5 +10,7 @@
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"NEW PASSION\",\n  \"invoice_number\": \"3833\",\n  \"date\": \"2025-08-03\",\n  \"amount\": 144.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"NEW PASSION\",\n  \"invoice_number\": \"3833\",\n  \"date\": \"2025-08-03\",\n  \"amount\": 144.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1227,
+  "output_tokens": 96
 }

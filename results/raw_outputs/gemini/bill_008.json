@@ -10,5 +10,7 @@
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"MAATHA AGENCIES\",\n  \"invoice_number\": \"376\",\n  \"date\": \"2020-09-28\",\n  \"amount\": 9222.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"MAATHA AGENCIES\",\n  \"invoice_number\": \"376\",\n  \"date\": \"2020-09-28\",\n  \"amount\": 9222.00,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1219,
+  "output_tokens": 94
 }

@@ -7,8 +7,10 @@
   "amount": 4802.0,
   "currency": "INR",
   "tax_details": {
-    "gst_number": "29AINPB3873J1ZD",
+    "gst_number": null,
     "gst_amount": 732.0
   },
-  "raw_response": "{\n  \"vendor\": \"SHRI HANUMAN TRADERS\",\n  \"invoice_number\": \"174\",\n  \"date\": \"2021-03-28\",\n  \"amount\": 4802,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"29AINPB3873J1ZD\",\n    \"gst_amount\": 732\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"SHRI HANUMAN TRADERS\",\n  \"invoice_number\": \"174\",\n  \"date\": \"2021-03-28\",\n  \"amount\": 4802,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": 732\n  }\n}",
+  "input_tokens": 1203,
+  "output_tokens": 101
 }

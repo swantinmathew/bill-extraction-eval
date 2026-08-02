@@ -10,5 +10,7 @@
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"SRINIVASA BOOK STORE\",\n  \"invoice_number\": \"4188\",\n  \"date\": \"2022-08-14\",\n  \"amount\": 19000.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"SRINIVASA BOOK STORE\",\n  \"invoice_number\": \"4188\",\n  \"date\": \"2022-08-14\",\n  \"amount\": 19000,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1241,
+  "output_tokens": 94
 }

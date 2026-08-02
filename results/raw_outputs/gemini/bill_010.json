@@ -10,5 +10,7 @@
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": null,\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 10250.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": null,\n  \"invoice_number\": null,\n  \"date\": null,\n  \"amount\": 10250.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 1239,
+  "output_tokens": 81
 }

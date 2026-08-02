@@ -1,14 +1,16 @@
 {
   "bill_id": "bill_012",
   "model_name": "openai",
-  "vendor": "NEW PASSION",
+  "vendor": "New Passion",
   "invoice_number": "3833",
-  "date": "2025-03-08",
+  "date": "2025-08-03",
   "amount": 480.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"NEW PASSION\",\n  \"invoice_number\": \"3833\",\n  \"date\": \"2025-03-08\",\n  \"amount\": 480,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"New Passion\",\n  \"invoice_number\": \"3833\",\n  \"date\": \"2025-08-03\",\n  \"amount\": 480,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 25628,
+  "output_tokens": 69
 }

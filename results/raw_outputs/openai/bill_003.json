@@ -3,12 +3,14 @@
   "model_name": "openai",
   "vendor": "Moti Mahal",
   "invoice_number": "19876",
-  "date": "2009-10-10",
+  "date": "2009-10-14",
   "amount": 1800.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"Moti Mahal\",\n  \"invoice_number\": \"19876\",\n  \"date\": \"2009-10-10\",\n  \"amount\": 1800,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"Moti Mahal\",\n  \"invoice_number\": \"19876\",\n  \"date\": \"2009-10-14\",\n  \"amount\": 1800,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}",
+  "input_tokens": 25628,
+  "output_tokens": 71
 }
