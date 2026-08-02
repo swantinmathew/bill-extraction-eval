@@ -2,7 +2,7 @@
 
 | Model | vendor | invoice_number | date | amount | currency |
 |---|---|---|---|---|---|
-| gemini | 0.90 | 0.92 | 0.92 | 0.83 | 1.00 |
+| gemini | 0.90 | 0.92 | 0.92 | 0.92 | 1.00 |
 | openai | 0.92 | 0.75 | 0.25 | 0.42 | 1.00 |
 
 # Date extraction breakdown (year / month / day)
@@ -16,8 +16,8 @@
 
 | Model | Bills wrong | Avg error | Median error | Max error |
 |---|---|---|---|---|
-| gemini | 2 | 7.7% | 7.7% | 12.2% |
-| openai | 7 | 61.9% | 15.3% | 233.3% |
+| gemini | 1 | 3.3% | 3.3% | 3.3% |
+| openai | 7 | 63.4% | 15.3% | 233.3% |
 # Estimated cost per model
 
 | Model | Cost/bill | Cost/100 bills | Total for dataset |
