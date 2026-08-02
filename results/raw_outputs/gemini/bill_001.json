@@ -1,14 +1,14 @@
 {
   "bill_id": "bill_001",
   "model_name": "gemini",
-  "vendor": "THE OLD VICARAGE RESTAURANT",
-  "invoice_number": "T9",
-  "date": null,
-  "amount": 228.5,
-  "currency": "GBP",
+  "vendor": "SMRUTHI KUDUMBASREE CANTEEN",
+  "invoice_number": "1572",
+  "date": "2025-08-04",
+  "amount": 152.0,
+  "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"THE OLD VICARAGE RESTAURANT\",\n  \"invoice_number\": \"T9\",\n  \"date\": null,\n  \"amount\": 228.5,\n  \"currency\": \"GBP\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"SMRUTHI KUDUMBASREE CANTEEN\",\n  \"invoice_number\": \"1572\",\n  \"date\": \"2025-08-04\",\n  \"amount\": 152,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
 }

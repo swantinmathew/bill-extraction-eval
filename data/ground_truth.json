@@ -1,11 +1,12 @@
 {
-  "bill_001": {
-    "vendor": "The Old Vicarage Restaurant",
-    "invoice_number": null,
-    "date": null,
-    "amount": 228.50,
-    "currency": "GBP",
-    "tax_details": {"gst_number": null, "gst_amount": null}
+"bill_001": {    
+"vendor": "Smruthi Kudumbasree Canteen",
+"invoice_number": "1572",
+"date": "2025-08-04",
+"amount": 152.00,
+"currency": "INR",
+"tax_details": {"gst_number": null, "gst_amount": null}
+    
   },
 "bill_002": {
   "vendor": "Nath Traders",
@@ -23,14 +24,14 @@
     "currency": "INR",
     "tax_details": {"gst_number": "07AAHFM6096Q2ZE", "gst_amount": 90.00}
     },
-  "bill_004": {
-    "vendor": "Vanakkam India Indian Restaurant",
-    "invoice_number": "01298",
-    "date": null,
-    "amount": 16.00,
-    "currency": null,
+    "bill_004": {
+    "vendor": "Geethas Net",
+    "invoice_number": null,
+    "date": "2025-12-30",
+    "amount": 80.00,
+    "currency": "INR",
     "tax_details": {"gst_number": null, "gst_amount": null}
-  },
+    },
   "bill_005": {
   "vendor": "Shri Hanuman Traders",
   "invoice_number": "174",
@@ -64,12 +65,12 @@
     "tax_details": {"gst_number": null, "gst_amount": null}
   },
   "bill_009": {
-    "vendor": "Bharat Associates",
-    "invoice_number": "004",
-    "date": "2024-11-15",
-    "amount": 32345.00,
+    "vendor": "Seeds N Plants",
+    "invoice_number": "8704",
+    "date": "2025-12-24",
+    "amount": 110.00,
     "currency": "INR",
-    "tax_details": {"gst_number": "09GBVPS8212J1ZP", "gst_amount": 1250.00}
+    "tax_details": {"gst_number": null, "gst_amount": null}
   },
   "bill_010": {
     "vendor": "Mukesh Nilu Vishwakarma",
@@ -88,11 +89,11 @@
     "tax_details": {"gst_number": null, "gst_amount": null}
   },
   "bill_012": {
-    "vendor": "Nancarrow & Temple Limited",
-    "invoice_number": "3852",
-    "date": "1970-03-24",
-    "amount": 53.55,
-    "currency": null,
-    "tax_details": {"gst_number": null, "gst_amount": null}
+  "vendor": "NEW PASSION",
+  "invoice_number": "3833",
+  "date": "2025-08-03",
+  "amount": 144.00,
+  "currency": "INR",
+  "tax_details": {"gst_number": null, "gst_amount": null}
   }
 }  

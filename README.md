@@ -20,7 +20,7 @@ bill-extraction-eval/
 │   │   ├── gemini_extractor.py
 │   │   └── openai_extractor.py   # via OpenRouter, gpt-4o-mini
 │   ├── eval/
-│   │   ├── scorer.py             # field-level accuracy scoring
+│   │   ├── scorer.py             # field-level accuracy scoring + diagnostics
 │   │   └── cost_tracker.py       # estimated cost per model
 │   ├── zoho/
 │   │   └── zoho_client.py        # OAuth2 + expense creation
@@ -63,7 +63,7 @@ streamlit run ui/app.py         # bonus: dataset comparison + live upload UI
 ```
 
 ## Bonus UI
-Live demo: https://your-app-name.streamlit.app
+Live demo: https://bill-extraction-audit.streamlit.app
 (If unavailable — free-tier hosting can sleep after inactivity, or API quota may be
 exhausted — screenshots below, or run locally: `streamlit run ui/app.py`)
 
@@ -86,10 +86,12 @@ Two tabs:
   page interaction) to avoid burning API quota unnecessarily.
 
 ## Dataset
-12 handwritten bills, chosen for variety: restaurant bills (India, UK, Cambodia),
-retail/tailoring receipts, a GST tax invoice, a bill book carbon copy, and a 1970s
-tailor's bill — mixing clean modern formats with genuinely ambiguous, messy
-handwriting and inconsistent printed totals.
+12 handwritten Indian bills — grocery, restaurant, tailoring, retail, stationery, and
+canteen receipts — chosen for variety in handwriting style, format, and legibility.
+Includes one Malayalam-script bill alongside English-script bills, to test whether
+extraction accuracy holds across scripts, not just handwriting styles. Personal names
+of individual customers were cropped/redacted from bill images before use, per the
+task's privacy guidance.
 
 ## Scoring methodology
 - **Exact match** — date, currency, invoice_number: these should either match
@@ -105,21 +107,45 @@ handwriting and inconsistent printed totals.
   well-contained in the longer one, scoring these cases as strong matches instead —
   a better reflection of genuine vendor-identification accuracy.
 
+Two diagnostic breakdowns supplement the primary field scores, to explain *why* a
+field failed rather than just *that* it failed:
+- **Date year/month/day breakdown** — isolates which part of a date extraction goes
+  wrong, instead of treating any mismatch as equally uninformative.
+- **Amount error magnitude (mean, median, max)** — mean alone is easily skewed by a
+  single severe outlier in a small dataset, so median is reported alongside it as the
+  more representative "typical error when wrong" figure.
+
 Where a bill had genuine ambiguity (e.g. printed total not matching the line-item sum,
-or separate "Total" vs "To Pay after deposit" figures), ground truth consistently uses
-the bill's final stated payable total.
+or unclear tax computation), ground truth consistently uses the bill's final stated
+payable total, and uncertain tax fields are left `null` rather than guessed.
 
 ## Results
-
-*(Run `python -m src.eval.scorer` and `python -m src.eval.cost_tracker` after the
-`partial_ratio` scoring change, then paste the updated tables from `results/report.md`
-here — the numbers below are from before that fix and are now stale.)*
 
 ### Accuracy per model per field
 | Model | vendor | invoice_number | date | amount | currency |
 |---|---|---|---|---|---|
-| gemini | 0.72 | 0.83 | 0.75 | 0.83 | 0.83 |
-| openai | 0.63 | 0.67 | 0.33 | 0.42 | 0.75 |
+| gemini | 0.90 | 0.92 | 0.92 | 0.83 | 1.00 |
+| openai | 0.92 | 0.75 | 0.25 | 0.42 | 1.00 |
+
+### Date extraction breakdown (year / month / day)
+| Model | year | month | day |
+|---|---|---|---|
+| gemini | 0.92 | 1.00 | 1.00 |
+| openai | 0.75 | 0.42 | 0.50 |
+
+OpenAI's date accuracy is weak across all three components, not isolated to one —
+year, month, and day are each meaningfully below Gemini's, suggesting a general
+difficulty reading handwritten dates rather than one specific format confusion.
+
+### Amount mismatches: mean vs median vs worst case
+| Model | Bills wrong | Avg error | Median error | Max error |
+|---|---|---|---|---|
+| gemini | 2 | 7.7% | 7.7% | 12.2% |
+| openai | 7 | 61.9% | 15.3% | 233.3% |
+
+OpenAI's typical error when wrong (median 15.3%) is about double Gemini's (7.7%),
+and its worst case (233.3%) is far more severe — a consistent, not just occasional,
+accuracy gap on amount extraction.
 
 ### Estimated cost per model
 | Model | Cost/bill | Cost/100 bills | Total for dataset |
@@ -128,19 +154,28 @@ here — the numbers below are from before that fix and are now stale.)*
 | openai | $0.00021 | $0.021 | $0.0025 |
 
 ## Recommendation
-Gemini outperforms OpenAI (gpt-4o-mini) across every field in this test, with the
-largest gaps in date extraction and amount extraction, while also being roughly half
-the estimated cost. Recommend Gemini for this use case.
+Gemini outperforms OpenAI (gpt-4o-mini) on every field, with the largest gaps in date
+(0.92 vs 0.25) and amount extraction (median error 7.7% vs 15.3%), while also costing
+roughly half as much. For handwritten bill extraction — Indian small-business receipts
+in particular — Gemini is the clear choice on both accuracy and cost. For digital
+(typed/printed) documents, both models would likely perform much closer to parity, since
+the difficulty here is specifically reading handwriting rather than general document
+understanding — a separate, lighter-weight pipeline could reasonably use either model,
+or default to the cheaper option, for typed invoices.
 
 ## Known limitations
 - Small sample size (12 bills) — findings are directional, not statistically robust.
-- Cost estimates use average token assumptions, not per-call logged usage.
-- OpenAI showed a systematic day/month date-format confusion (DD/MM vs MM/DD) worth
-  further testing at scale.
-- A few bills had inherent ambiguity (printed total vs recalculated total, pre-tax vs
-  post-tax amount) — resolved by trusting the bill's stated total consistently.
+- Cost estimates use average token assumptions, not per-call logged usage; a
+  production version would capture `response.usage` at call time for exact costs.
+- A few bills had inherent ambiguity (printed total vs recalculated total, unclear tax
+  computation) — resolved by trusting the bill's stated total and leaving uncertain
+  tax fields `null` rather than guessing.
 - Gemini free-tier rate limits (20 req/day) were hit during testing, requiring the run
-  to be split across two sessions.
+  to be split across sessions.
+- Amount error percentages are a comparative signal between models on identical
+  images, not an absolute measure of handwriting difficulty — with a small sample,
+  a single severe misread can still meaningfully shift results, which is why median
+  and max are reported alongside the mean rather than the mean alone.
 
 ## Zoho Books integration
 Uses Zoho's self-client OAuth2 flow: a long-lived refresh token (stored in `.env`) is

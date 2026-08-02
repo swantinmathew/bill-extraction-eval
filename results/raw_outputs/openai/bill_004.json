@@ -1,14 +1,14 @@
 {
   "bill_id": "bill_004",
   "model_name": "openai",
-  "vendor": "Vanakkam Thiru",
-  "invoice_number": "01298",
-  "date": null,
-  "amount": 16.0,
+  "vendor": "Geethas Net",
+  "invoice_number": null,
+  "date": "2025-12-30",
+  "amount": 80.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"Vanakkam Thiru\",\n  \"invoice_number\": \"01298\",\n  \"date\": null,\n  \"amount\": 16.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}\n}"
+  "raw_response": "{\n  \"vendor\": \"Geethas Net\",\n  \"invoice_number\": null,\n  \"date\": \"2025-12-30\",\n  \"amount\": 80,\n  \"currency\": \"INR\",\n  \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}\n}"
 }

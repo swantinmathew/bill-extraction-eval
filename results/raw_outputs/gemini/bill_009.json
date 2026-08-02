@@ -1,14 +1,14 @@
 {
   "bill_id": "bill_009",
   "model_name": "gemini",
-  "vendor": "BHARAT ASSOCIATES",
-  "invoice_number": "004",
-  "date": "2024-01-15",
-  "amount": 32345.0,
+  "vendor": "Seeds 'N' Plants",
+  "invoice_number": "8704",
+  "date": "2025-12-24",
+  "amount": 110.0,
   "currency": "INR",
   "tax_details": {
-    "gst_number": "09GBVPS8212J1ZP",
-    "gst_amount": 1250.0
+    "gst_number": null,
+    "gst_amount": null
   },
-  "raw_response": "{\n  \"vendor\": \"BHARAT ASSOCIATES\",\n  \"invoice_number\": \"004\",\n  \"date\": \"2024-01-15\",\n  \"amount\": 32345,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": \"09GBVPS8212J1ZP\",\n    \"gst_amount\": 1250\n  }\n}"
+  "raw_response": "{\n  \"vendor\": \"Seeds 'N' Plants\",\n  \"invoice_number\": \"8704\",\n  \"date\": \"2025-12-24\",\n  \"amount\": 110,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
 }

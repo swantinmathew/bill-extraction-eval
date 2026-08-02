@@ -1,14 +1,14 @@
 {
   "bill_id": "bill_004",
   "model_name": "gemini",
-  "vendor": "Vanakkam India Indian Restaurant",
-  "invoice_number": "01298",
-  "date": null,
-  "amount": 16.0,
+  "vendor": "Geethas Net",
+  "invoice_number": null,
+  "date": "2023-12-30",
+  "amount": 80.0,
   "currency": "INR",
   "tax_details": {
     "gst_number": null,
     "gst_amount": null
   },
-  "raw_response": "{\"vendor\": \"Vanakkam India Indian Restaurant\", \"invoice_number\": \"01298\", \"date\": null, \"amount\": 16.0, \"currency\": \"INR\", \"tax_details\": {\"gst_number\": null, \"gst_amount\": null}}"
+  "raw_response": "{\n  \"vendor\": \"Geethas Net\",\n  \"invoice_number\": null,\n  \"date\": \"2023-12-30\",\n  \"amount\": 80.0,\n  \"currency\": \"INR\",\n  \"tax_details\": {\n    \"gst_number\": null,\n    \"gst_amount\": null\n  }\n}"
 }
