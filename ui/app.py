@@ -15,6 +15,7 @@ GROUND_TRUTH_PATH = Path("data/ground_truth.json")
 RAW_BILLS_DIR = Path("data/raw_bills")
 RAW_OUTPUTS_DIR = Path("results/raw_outputs")
 FIELDS = ["vendor", "invoice_number", "date", "amount", "currency"]
+TAX_FIELDS = ["gst_number", "gst_amount"]
 
 st.set_page_config(page_title="Bill Extraction Audit", page_icon="\U0001F4D2", layout="wide")
 
@@ -194,6 +195,15 @@ with tab_dataset:
                 f'<span class="field-value">{display}</span></div>',
                 unsafe_allow_html=True,
             )
+        truth_tax = truth.get("tax_details", {}) or {}
+        for tax_field in TAX_FIELDS:
+            val = truth_tax.get(tax_field)
+            display = val if val is not None else "\u2014"
+            st.markdown(
+                f'<div class="field-row"><span class="field-label">{tax_field}</span>'
+                f'<span class="field-value">{display}</span></div>',
+                unsafe_allow_html=True,
+            )
         st.markdown('</div>', unsafe_allow_html=True)
 
     for col, model_dir in zip(col_models, model_dirs):
@@ -214,6 +224,20 @@ with tab_dataset:
                     display = pred_val if pred_val is not None else "\u2014"
                     st.markdown(
                         f'<div class="field-row"><span class="field-label">{field}</span>'
+                        f'<span class="field-value {css_class}"><span class="mark">{mark}</span>{display}</span></div>',
+                        unsafe_allow_html=True,
+                    )
+                pred_tax = pred.get("tax_details", {}) or {}
+                truth_tax = truth.get("tax_details", {}) or {}
+                for tax_field in TAX_FIELDS:
+                    pred_val = pred_tax.get(tax_field)
+                    truth_val = truth_tax.get(tax_field)
+                    is_match = (str(pred_val) == str(truth_val)) if (truth_val is not None or pred_val is not None) else True
+                    mark = "\u2713" if is_match else "\u2717"
+                    css_class = "match" if is_match else "mismatch"
+                    display = pred_val if pred_val is not None else "\u2014"
+                    st.markdown(
+                        f'<div class="field-row"><span class="field-label">{tax_field}</span>'
                         f'<span class="field-value {css_class}"><span class="mark">{mark}</span>{display}</span></div>',
                         unsafe_allow_html=True,
                     )
@@ -303,6 +327,14 @@ with tab_upload:
                                 display = pred.get(field) if pred.get(field) is not None else "\u2014"
                                 st.markdown(
                                     f'<div class="field-row"><span class="field-label">{field}</span>'
+                                    f'<span class="field-value">{display}</span></div>',
+                                    unsafe_allow_html=True,
+                                )
+                            pred_tax = pred.get("tax_details", {}) or {}
+                            for tax_field in TAX_FIELDS:
+                                display = pred_tax.get(tax_field) if pred_tax.get(tax_field) is not None else "\u2014"
+                                st.markdown(
+                                    f'<div class="field-row"><span class="field-label">{tax_field}</span>'
                                     f'<span class="field-value">{display}</span></div>',
                                     unsafe_allow_html=True,
                                 )
